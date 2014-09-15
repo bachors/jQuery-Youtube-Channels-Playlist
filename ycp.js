@@ -1,3 +1,10 @@
+/******************************************************
+* #### jQuery-Youtube-Channels-Playlist ####
+* Coded by Ican Bachors 2014.
+* http://ibacor.com/labs/jquery-youtube-channels-playlist/
+* Updates will be posted to this site.
+******************************************************/
+
 var channels_name='IndoPopChannel', //example
 channels_title='jQuery plugin by @bachors',
 apikey='YOUR GOOGLE API KEY';
