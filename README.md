@@ -1,6 +1,8 @@
 jQuery-Youtube-Channels-Playlist
 ================================
-
+<h2>Update youtube API v3</h2>
+<p>YouTube device support message<br>
+https://developers.google.com/youtube/v3/getting-started</p><br>
 <p><b>Features:</b><br>
 - you can customize width and height of the widget on your website.<br>
 - the widget itself is responsive; given a width (or %) for the widget, the inner contents will resize accordingly.<br>
