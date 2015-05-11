@@ -87,7 +87,7 @@ a img {
 	width:66.50%;
 }
 
-.ibacordotcom_youtube_thumb{float:left;margin-left:10px;}
+.ibacordotcom_youtube_thumb{float:left;margin-right:10px;}
 
 .ibacordotcom_youtube_thumb {
     position: relative;
@@ -165,10 +165,6 @@ div.ibacordotcom-play:hover {
 
 .ibacordotcom_vid_prev,.ibacordotcom_vid_next,.ibacordotcom-play{
 	cursor:pointer
-}
-
-i.fa {
-	margin-right: 20px;
 }
 
 iframe.ibacordotcom-vid-iframe {
