@@ -5,8 +5,172 @@
 * Updates will be posted to this site.
 ******************************************************/
 
-var channels_name='IndoPopChannel', //example
+var channels_name='vevouk', //example
 channels_title='jQuery plugin by @bachors',
 apikey='YOUR GOOGLE API KEY';
 
-eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('$.H({u:\'N://B.11.t/w/1j/1Z?1k=1l&20=\'+1m+\'&12=\'+1n,1o:1p,I:\'O\'}).J(5(a){m b=a.y[0].1l.21.22,1q=a.y[0].1r,1s=\'\';P(b,1n,1s,23,1q,1m)});5 P(f,g,h,j,k,l){$.H({u:\'N://B.11.t/w/1j/24?1k=Q&25=\'+f+\'&12=\'+g+\'&26=\'+h,I:\'O\'}).J(5(c){m d=\'\';d+=\'<6 3="4-p-27"><9 3="4-28-K">\'+j+\'</9><13><9 3="4-p-1t">1t <a R="C://B.w.t/S/\'+l+\'" T="U">\'+l+\'</a></9><V>\';d+=\'<i 3="7 7-1u-29 1v" K="2a W"></i> \';d+=\'<i 3="7 7-1u-2b 1w" K="2c W"></i></6><6 3="4-p-2d">\';$.1x(c.y,5(i,a){m b=c.y[i].Q.2e.2f;1y(b,i);d+=\'<6 3="4-14" 8-15="\'+b+\'"><6 3="2g"><X 16="\'+c.y[i].Q.2h.2i.u+\'" L="2j"><9 3="4-p-1z\'+i+\'"></9></6>\';d+=c.y[i].Q.K+\'</6>\'});d+=\'</6>\';$(\'.2k\').D(d);q(c.17==E){m e=$(".4-14").1A("8-15");18(e,k,l)}q(c.17!=E){$(\'.1v\').19(5(){m a=c.17;P(f,g,a,j,k,l);r 1a})}$(\'.1w\').19(5(){m a=c.2l;P(f,g,a,j,k,l);r 1a});$(".4-14").1x(5(){$(M).19(5(){m a=$(M).1A("8-15");$(\'6\').2m(\'4-p-1B\');$(M).2n(\'4-p-1B\');18(a,k,l);r 1a})})})}5 18(c,d,e){$.H({u:\'C://1C.w.t/1D/1E/W/\'+c+\'?v=2&L=1F\',I:\'O\'}).J(5(a){m b=\'\',Y=\'\',Z=\'\',F=\'\',1b=\'\';q(a.8.1G!=E){Y+=a.8.1G.1H()}1I{Y+=\'0\'}q(a.8.1J!=E){Z+=a.8.1J.1H()}1I{Z+=\'0\'}q(a.8.F!=E){F+=a.8.F}q(a.8.1K!=E){1b+=a.8.1K}b+=\'<1c 16="C://B.w.t/2o/\'+c+\'" 2p="" 2q="0" 3="4-p-1c"></1c>\';b+=\'<6 3="4-p-1d"><1L>\'+a.8.K+\'</1L><V>\';b+=\'<6 3="4-p-1d-S"><a R="C://B.w.t/2r/\'+d+\'" T="U"><9 1r="4-S-X"></9> <9 3="4-1M">\'+a.8.1M+\'</9></a><i 3="7 7-2s 1e-1f"> \'+Y+\'x</i><i 3="7 7-2t-2u 1e-1f"> \'+Z+\'</i></6><V><i 3="7 7-2v-L 7-2x"></i> <1N 2w="2y" 2z="C://2A.2B/\'+c+\'" 3="4-1N" 2C="M.2D();M.2E()" 1O="1O"></6>\';b+=\'<6 3="4-p-1d"><i 3="7 7-2F-o"> <9>\'+1P(1Q 1R(a.8.2G).2H())+\'</9></i><a R="C://B.w.t/\'+F+\'" T="U"><i 3="7 7-2I 1e-1f"> <9>\'+F+\'</9></i></a><V>\'+1S(1b).1T(/\\n/g,\'<13>\')+\'<13></6>\';1U(e);$(\'.2J\').D(b)})}5 1y(c,i){$.H({u:\'C://1C.w.t/1D/1E/W/\'+c+\'?v=2&L=1F\',I:\'O\'}).J(5(a){m b=a.8.2K,10=z.A(b/1g),1h=b-10*1g,1V=10+\':\'+1h;$(\'.4-p-1z\'+i).D(1V)})}5 1S(b){m c=/(N?:\\/\\/[^\\s]+)/g;r b.1T(c,5(a){r\'<a R="\'+a+\'" 2L="2M" T="U">\'+a+\'</a>\'})}5 1U(c){m d=\'N://B.11.t/2N/2O/2P/\',1W=\'/2Q/2R\',1i=\'y(1X(1Y(u)))\';$.H({u:d+\'+\'+c+1W+\'?12=2S&1i=\'+1i+\'&2T=1\',1o:1p,I:\'2U\'}).J(5(a){m b=a.y,i=0,D=\'\';2V(i=0;i<b.2W;i+=1){D+=\'<X 16="\'+b[i].1X.1Y.u+\'" L="" />\'}$(\'#4-S-X\').D(D)})}5 1P(a){m s=z.A((1Q 1R()-a)/2X),i=z.A(s/2Y);q(i>1){r i+" 2Z G"}i=z.A(s/30);q(i>1){r i+" 31 G"}i=z.A(s/32);q(i>1){r i+" 33 G"}i=z.A(s/34);q(i>1){r i+" 35 G"}i=z.A(s/1g);q(i>1){r i+" 10 G"}r z.A(s)+" 1h G"}',62,192,'|||class|ibacordotcom|function|div|fa|data|span|||||||||||||var|||vid|if|return||com|url||youtube||items|Math|floor|www|http|html|null|category|ago|ajax|dataType|done|title|alt|this|https|json|youtube_video_list|snippet|href|user|target|_BLANK|hr|videos|img|viewc|likc|minutes|googleapis|key|br|play|vvv|src|prevPageToken|youtube_det|click|false|desc|iframe|box|pull|right|60|seconds|fields|v3|part|contentDetails|channels_name|apikey|crossDomain|true|chid|id|nekpag|by|fast|ibacordotcom_vid_prev|ibacordotcom_vid_next|each|getwaktu|tm|attr|active|gdata|feeds|api|jsonc|viewCount|toLocaleString|else|likeCount|description|h1|uploader|input|readonly|_timeSince|new|Date|urlify|replace|gplus|waktu|apiend|actor|image|channels|forUsername|relatedPlaylists|uploads|channels_title|playlistItems|playlistId|pageToken|top|nav|backward|Previous|forward|Next|bottom|resourceId|videoId|ibacordotcom_youtube_thumb|thumbnails|default|ibacor|ibacordotcom_youtube_channels|nextPageToken|removeClass|addClass|embed|allowfullscreen|frameborder|channel|eye|thumbs|up|share|type||text|value|youtu|be|onclick|focus|select|clock|uploaded|getTime|tags|ibacordotcom_vid_play|duration|rel|nofollow|plus|v1|people|activities|public|AIzaSyCj2GrDSBy6ISeGg3aWUM4mn3izlA1wgt0|maxResults|jsonp|for|length|1000|31536000|years|2592000|months|86400|days|3600|hours'.split('|'),0,{}))
+$.ajax({
+    url: 'https://www.googleapis.com/youtube/v3/channels?part=contentDetails&forUsername=' + channels_name + '&key=' + apikey,
+    crossDomain: true,
+    dataType: 'json'
+}).done(function(a) {
+    var b = a.items[0].contentDetails.relatedPlaylists.uploads,
+        chid = a.items[0].id,
+        nekpag = '';
+    youtube_video_list(b, apikey, nekpag, channels_title, chid, channels_name)
+});
+
+function youtube_video_list(f, g, h, j, k, l) {
+    $.ajax({
+        url: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=' + f + '&key=' + g + '&pageToken=' + h,
+        dataType: 'json'
+    }).done(function(c) {
+        var d = '';
+        d += '<div class="ibacordotcom-vid-top"><span class="ibacordotcom-nav-title">' + j + '</span><br><span class="ibacordotcom-vid-by">by <a href="http://www.youtube.com/user/' + l + '" target="_BLANK">' + l + '</a></span><hr>';
+        d += '<i class="fa fa-fast-backward ibacordotcom_vid_prev" title="Previous videos"></i> ';
+        d += '<i class="fa fa-fast-forward ibacordotcom_vid_next" title="Next videos"></i></div><div class="ibacordotcom-vid-bottom">';
+        $.each(c.items, function(i, a) {
+            var b = c.items[i].snippet.resourceId.videoId;
+            getwaktu(b, i, g);
+            d += '<div class="ibacordotcom-play" data-vvv="' + b + '"><div class="ibacordotcom_youtube_thumb"><img src="' + c.items[i].snippet.thumbnails.default.url + '" alt="ibacor"><span class="ibacordotcom-vid-tm' + i + '"></span></div>';
+            d += c.items[i].snippet.title + '</div>'
+        });
+        d += '</div>';
+        $('.ibacordotcom_youtube_channels').html(d);
+        if (c.prevPageToken == null) {
+            var e = $(".ibacordotcom-play").attr("data-vvv");
+            youtube_det(e, k, l, g)
+        }
+        if (c.prevPageToken != null) {
+            $('.ibacordotcom_vid_prev').click(function() {
+                var a = c.prevPageToken;
+                youtube_video_list(f, g, a, j, k, l);
+                return false
+            })
+        }
+        $('.ibacordotcom_vid_next').click(function() {
+            var a = c.nextPageToken;
+            youtube_video_list(f, g, a, j, k, l);
+            return false
+        });
+        $(".ibacordotcom-play").each(function() {
+            $(this).click(function() {
+                var a = $(this).attr("data-vvv");
+                $('div').removeClass('ibacordotcom-vid-active');
+                $(this).addClass('ibacordotcom-vid-active');
+                youtube_det(a, k, l, g);
+                return false
+            })
+        })
+    })
+}
+
+function youtube_det(c, d, e, g) {
+    $.ajax({
+        url: 'https://www.googleapis.com/youtube/v3/videos?id=' + c + '&key=' + g + '&part=snippet,statistics',
+        dataType: 'json'
+    }).done(function(a) {
+        var b = '',
+            viewc = a.items[0].statistics.viewCount,
+            likc = a.items[0].statistics.likeCount,
+            likd = a.items[0].statistics.dislikeCount,
+            category = '',
+            judul = a.items[0].snippet.localized.title,
+            desc = a.items[0].snippet.localized.description;
+        b += '<iframe src="http://www.youtube.com/embed/' + c + '" allowfullscreen="" frameborder="0" class="ibacordotcom-vid-iframe"></iframe>';
+        b += '<div class="ibacordotcom-vid-box"><h1>' + judul + '</h1><hr>';
+        b += '<div class="ibacordotcom-vid-box-user"><a href="http://www.youtube.com/channel/' + d + '" target="_BLANK"><span id="ibacordotcom-user-img"></span> <span class="ibacordotcom-uploader">' + a.items[0].snippet.channelTitle + '</span></a><h4 class="pull-right"> ' + addCommas(viewc) + '</h4></div></div>';
+        b += '<div class="ibacordotcom-vid-box"><i class="fa fa-clock-o"> <span>' + _timeSince(new Date(a.items[0].snippet.publishedAt).getTime()) + '</span></i><i class="fa fa-thumbs-down pull-right"> ' + addCommas(likd) + '</i><i class="fa fa-thumbs-up pull-right"> ' + addCommas(likc) + '</i><hr>' + urlify(desc).replace(/\n/g, '<br>') + '<br></div>';
+        gplus(e, g);
+        $('.ibacordotcom_vid_play').html(b)
+    })
+}
+
+function getwaktu(c, i, g) {
+    $.ajax({
+        url: 'https://www.googleapis.com/youtube/v3/videos?id=' + c + '&key=' + g + '&part=contentDetails',
+        dataType: 'json'
+    }).done(function(a) {
+        var b = a.items[0].contentDetails.duration,
+            dataw = '',
+            menit = '',
+            detik = '';
+		if(b.match(/M/g)){
+            dataw = b.split('M');
+            menit = dataw[0].replace('PT','');
+			if(dataw[1] != ''){
+				detik = dataw[1].replace('S','');
+			}else{
+				detik = '00';
+			}
+		}else{
+            dataw = b.split('PT');
+			menit = '00';
+			detik = dataw[1].replace('S','');
+		}
+        $('.ibacordotcom-vid-tm' + i).html(menit + ':' + detik)
+    })
+}
+
+function urlify(b) {
+    var c = /(https?:\/\/[^\s]+)/g;
+    return b.replace(c, function(a) {
+        return '<a href="' + a + '" rel="nofollow" target="_BLANK">' + a + '</a>'
+    })
+}
+
+function gplus(c, g) {
+    var d = 'https://www.googleapis.com/plus/v1/people/',
+        apiend = '/activities/public',
+        fields = 'items(actor(image(url)))';
+    $.ajax({
+        url: d + '+' + c + apiend + '?key=' + g + '&fields=' + fields + '&maxResults=1',
+        crossDomain: true,
+        dataType: 'jsonp'
+    }).done(function(a) {
+        var b = a.items,
+            i = 0,
+            html = '';
+        for (i = 0; i < b.length; i += 1) {
+            html += '<img src="' + b[i].actor.image.url + '" alt="" />'
+        }
+        $('#ibacordotcom-user-img').html(html)
+    })
+}
+
+function _timeSince(a) {
+    var s = Math.floor((new Date() - a) / 1000),
+        i = Math.floor(s / 31536000);
+    if (i > 1) {
+        return i + " years ago"
+    }
+    i = Math.floor(s / 2592000);
+    if (i > 1) {
+        return i + " months ago"
+    }
+    i = Math.floor(s / 86400);
+    if (i > 1) {
+        return i + " days ago"
+    }
+    i = Math.floor(s / 3600);
+    if (i > 1) {
+        return i + " hours ago"
+    }
+    i = Math.floor(s / 60);
+    if (i > 1) {
+        return i + " minutes ago"
+    }
+    return Math.floor(s) + " seconds ago"
+}
+
+function addCommas(nStr){
+	nStr += '';
+	x = nStr.split('.');
+	x1 = x[0];
+	x2 = x.length > 1 ? '.' + x[1] : '';
+	var rgx = /(\d+)(\d{3})/;
+	while (rgx.test(x1)) {
+		x1 = x1.replace(rgx, '$1' + ',' + '$2');
+	}
+	return x1 + x2;
+}
