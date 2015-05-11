@@ -28,16 +28,6 @@ body * {
 
 iframe,input,textarea,button{border:0}
 
-.ibacordotcom-input {
-	font-size: 30px;
-	background: #fff;
-	border: 2px solid #EAEBEB;
-	color: #34495e;
-	padding: 10px;
-	margin: 0 0 10px;
-	width: 70%;
-}
-
 h1{
 	line-height: 34px;
 	font-weight: bold;
@@ -186,7 +176,7 @@ iframe.ibacordotcom-vid-iframe {
 	height: 500px
 }
 @media only screen and (min-width: 960px) and (max-width: 1045px) {
-	h1,.ibacordotcom-input {font-size: 26px;line-height: 24px;}
+	h1{font-size: 26px;line-height: 24px;}
 	#ibacordotcom-content {padding:50px}
 	.ibacordotcom-vid-katuhu {width:35%}
 	.ibacordotcom-vid-kenca {width:65%}
@@ -194,7 +184,7 @@ iframe.ibacordotcom-vid-iframe {
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	body {font-size: 14px;line-height: 24px}
-	h1,.ibacordotcom-input {font-size: 20px;line-height: 20px;}
+	h1 {font-size: 20px;line-height: 20px;}
 	#ibacordotcom-content {padding:10px}
 	.ibacordotcom-vid-katuhu {width:35%}
 	.ibacordotcom-vid-kenca {width:65%}
@@ -202,7 +192,7 @@ iframe.ibacordotcom-vid-iframe {
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	body {font-size: 14px;line-height: 24px}
-	h1,.ibacordotcom-input {font-size: 18px;line-height: 20px;}
+	h1 {font-size: 18px;line-height: 20px;}
 	#ibacordotcom-content {padding:5px}
 	.ibacordotcom-vid-katuhu {width:100%}
 	.ibacordotcom-vid-kenca {width:100%;margin-bottom:20px}
@@ -212,11 +202,10 @@ iframe.ibacordotcom-vid-iframe {
 @media screen and (max-width:479px){
 	body {font-size: 12px;line-height: 22px}
 	#ibacordotcom-content {padding:0}
-	h1,.ibacordotcom-input {font-size: 16px;line-height: 18px;}
+	h1 {font-size: 16px;line-height: 18px;}
 	.ibacordotcom-vid-box{padding:5px}
 	.ibacordotcom-vid-katuhu{margin:0}
 	.ibacordotcom-vid-kenca {margin:0 0 20px 0}
 	.ibacordotcom-unit{width:auto;margin-left:0;display:block;margin-top:0}
 	iframe.ibacordotcom-vid-iframe {height: 350px;}
-	.ibacordotcom-input {width: auto;}
 }
