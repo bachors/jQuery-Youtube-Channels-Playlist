@@ -14,6 +14,7 @@ https://developers.google.com/youtube/v3/getting-started</p><br>
 <p>Specify which Youtube channel you would like to display.
 <pre>var channels_name='vice', // custom cahnnel
 channels_title='Vice playlist', // custom title
+type='forUsername', // type='forUsername' (by user) or type='id' (by channel)
 apikey = 'YOUR API KEY';</pre>
 </p>
 
