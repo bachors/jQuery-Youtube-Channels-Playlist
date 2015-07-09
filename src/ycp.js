@@ -7,10 +7,11 @@
 
 var channels_name='vevouk', //example
 channels_title='jQuery plugin by @bachors',
+type='forUsername', // type='forUsername' (by user) or type='id' (by channel)
 apikey='YOUR GOOGLE API KEY';
 
 $.ajax({
-    url: 'https://www.googleapis.com/youtube/v3/channels?part=contentDetails&forUsername=' + channels_name + '&key=' + apikey,
+    url: 'https://www.googleapis.com/youtube/v3/channels?part=contentDetails&' + type + '=' + channels_name + '&key=' + apikey,
     crossDomain: true,
     dataType: 'json'
 }).done(function(a) {
