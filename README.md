@@ -9,13 +9,30 @@ https://developers.google.com/youtube/v3/getting-started</p><br>
 - a top featured video can be opened in the video player on load of the widget.<br>
 - displays your actual complete youtube channel on your website just like its shown on youtube.</p>
 
-<p>Register and get your Youtube API key <a href="https://code.google.com/apis/console" target="_blank">here</a> and then insert your key into the <code>ycp.js</code></p>
+<p>Register and get your Youtube API key <a href="https://code.google.com/apis/console" target="_blank">here</a></p>
 
-<p>Specify which Youtube channel you would like to display.
-<pre>var channels_name='vice', // custom cahnnel
-channels_title='Vice playlist', // custom title
-type='forUsername', // type='forUsername' (by user) or type='id' (by channel)
-apikey = 'YOUR API KEY';</pre>
+<h1>Install:</h1>
+<pre><pre><code>&lt;!-- include font awesome --&gt;
+&lt;link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"&gt;
+
+&lt;!-- Custom style  Youtube Channels Playlist --&gt;
+&lt;link type="text/css" rel="stylesheet" href="src/ycp.css" /&gt;
+
+&lt;!-- include jQuery --&gt;
+&lt;script src="//code.jquery.com/jquery-2.1.1.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- jQuery Youtube Channels Playlist --&gt;
+&lt;script src="src/ycp.js"&gt;&lt;/script&gt;
+
+&lt;!-- Setting Example --&gt;
+&lt;script&gt;
+    ibacor_ycp(
+        channels_name = 'vice', //example
+        channels_title = 'jQuery plugin by @bachors',
+        type = 'forUsername', // type='forUsername' (by user) or type='id' (by channel)
+        apikey = 'Your API Key'
+    );
+&lt;/script&gt;</code></pre></pre>
 </p>
 
 <p><a href="http://ibacor.com/demo/jquery-youtube-channels-playlist/">DEMO</a></p>
