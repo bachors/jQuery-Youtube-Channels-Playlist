@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+		
+		<title>jQuery Youtube Channels Playlist - iBacor.com</title>
+
+		<!-- Custom style  Youtube Channels Playlist -->
+		<link type="text/css" rel="stylesheet" href="src/ycp.css" />
+
+	</head>
+	<body>
+
+		<div id="ibacordotcom-content">
+			<div class="ibacordotcom-unit ibacordotcom-vid-kenca">
+				<div class="ibacordotcom_vid_play"></div>
+			</div>
+			<div class = "ibacordotcom-unit ibacordotcom-vid-katuhu">
+				<div class="ibacordotcom_youtube_channels"></div>
+			</div>
+		</div>
+
+		<!-- include jQuery -->
+		<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+
+		<!-- jQuery Youtube Channels Playlist -->
+		<script src="src/ycp.js"></script>
+
+		<!-- Setting Example -->
+		<script>
+			ibacor_ycp(
+				channels_name = 'vevouk', //example
+				type = 'forUsername', // type='forUsername' (by user) or type='id' (by channel)
+				apikey = 'Your API Key'
+			);
+		</script>
+
+	</body>
+</html>
