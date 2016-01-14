@@ -27,10 +27,10 @@ https://developers.google.com/youtube/v3/getting-started</p><br>
 &lt;!-- Setting Example --&gt;
 &lt;script&gt;
     ibacor_ycp(
-        channels_name = 'vice', //example by USER name or channel ID
+        channels_name = 'vice', // example by USER name or channel ID
         channels_title = 'jQuery plugin by @bachors',
         type = 'forUsername', // type='forUsername' (by user) or type='id' (by channel)
-		autoplay = false, //true or false
+		autoplay = false, // true or false
         apikey = 'Your API Key'
     );
 &lt;/script&gt;</code></pre></pre>
