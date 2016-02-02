@@ -7,7 +7,8 @@ https://developers.google.com/youtube/v3/getting-started</p><br>
 - you can customize width and height of the widget on your website.<br>
 - the widget itself is responsive; given a width (or %) for the widget, the inner contents will resize accordingly.<br>
 - a top featured video can be opened in the video player on load of the widget.<br>
-- displays your actual complete youtube channel on your website just like its shown on youtube.</p>
+- displays your actual complete youtube channel on your website just like its shown on youtube.<br>
+- Dinamic URL video.</p>
 
 <p>Register and get your Youtube API key <a href="https://code.google.com/apis/console" target="_blank">here</a></p>
 
