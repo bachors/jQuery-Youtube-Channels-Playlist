@@ -1,2 +1,105 @@
-<p style="margin-top:20%;margin-left:40%"><a href="index-1.html">Example 1</a> - <a href="index-2.html">Example 2</a></p>
-<a href="https://github.com/bachors/jQuery-Youtube-Channels-Playlist" target="_BLANK"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+		
+		<title>jQuery Youtube Channels Playlist - iBacor.com</title>
+
+		<!-- Custom style  Youtube Channels Playlist -->
+		<link type="text/css" rel="stylesheet" href="css/ycp.css" />
+		
+		<style>
+		body {
+			margin: 20px 10% 20px 10%
+		}
+		
+		pre {
+			padding: 10px;
+			background: #fafafa;
+			border-radius: 4px;
+			border: 1px solid #ddd;
+			overflow: auto
+		}
+
+		@media screen and (max-width:1280px){			
+			body {
+				margin: 20px 5% 10% 5%
+			}
+		}
+
+		@media screen and (max-width:967px){			
+			body {
+				margin: 20px 0px 20px 0px
+			}
+		}
+		</style>
+
+	</head>
+	<body>	
+		
+		<h1 align="center">Demo Example <a href="https://github.com/bachors/jQuery-Youtube-Channels-Playlist" target="_BLANK">YCP.JS v03</a></h1>
+		<p><b>NEW:</b> Multi channel playlist</p>
+		<pre>&lt;!-- Selector by Id --&gt;
+&lt;div id="unix" data-ycp="bachorsan"&gt;&lt;/div&gt;
+
+&lt;!-- Selector by ClassName --&gt;
+&lt;div class="demo" data-ycp="UCpSPS5yLCxYRuZSrCx-eBjA"&gt;&lt;/div&gt; &lt;!-- By ChannelId --&gt;
+&lt;div class="demo" data-ycp="vevouk"&gt;&lt;/div&gt; &lt;!-- By UserName --&gt;
+
+&lt;script&gt;        
+    $(function() {
+	
+        $("#unix").ycp(
+            playlist = 6, // number of videos playlist count
+            autoplay = true, // true or false
+            apikey = 'AIzaSyCj2xxxxxxxxxxxx' // your google api key
+        );
+		
+        $(".demo").ycp(
+            playlist = 10, // number of videos playlist count
+            autoplay = false, // true or false
+            apikey = 'AIzaSyCj2xxxxxxxxxxxx' // your google api key
+        );
+		
+    });
+&lt;/script&gt;</pre>
+
+		<!-- Selector by Id -->
+		<h1 align="center">Bachors</h1>	
+		<div id="unix" data-ycp="bachorsan"></div>
+
+		<!-- Selector by ClassName -->
+		<h1 align="center">Sekolah Koding</h1>	
+		<div class="demo" data-ycp="UCpSPS5yLCxYRuZSrCx-eBjA"></div> <!-- By ChannelId -->
+		<h1 align="center">Vevo Uk</h1>	
+		<div class="demo" data-ycp="vevouk"></div> <!-- By UserName -->
+
+		<!-- include jQuery -->
+		<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+
+		<!-- jQuery Youtube Channels Playlist -->
+		<script src="js/ycp.js"></script>
+
+		<!-- Setting Example -->
+		<script>		
+		$(function() {
+		
+			$("#unix").ycp(
+				playlist = 6, // number of videos playlist count
+				autoplay = true, //true or false
+				apikey = 'AIzaSyCj2xxxxxxxxxxxx' // your google api key
+			);
+			
+			$(".demo").ycp(
+				playlist = 10, // number of videos playlist count
+				autoplay = false, //true or false
+				apikey = 'AIzaSyCj2xxxxxxxxxxxx' // your google api key
+			);
+			
+		});
+		</script>
+
+	</body>
+</html>
