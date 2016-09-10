@@ -1,5 +1,5 @@
 /******************************************************
-* #### jQuery-Youtube-Channels-Playlist v03 ####
+* #### jQuery-Youtube-Channels-Playlist v04 ####
 * Coded by Ican Bachors 2014.
 * http://ibacor.com/labs/jquery-youtube-channels-playlist/
 * Updates will be posted to this site.
