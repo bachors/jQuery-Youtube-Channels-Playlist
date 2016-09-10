@@ -39,40 +39,48 @@
 	</head>
 	<body>	
 		
-		<h1 align="center">Demo Example <a href="https://github.com/bachors/jQuery-Youtube-Channels-Playlist" target="_BLANK">YCP.JS v03</a></h1>
+		<h1 align="center">Demo Example <a href="https://github.com/bachors/jQuery-Youtube-Channels-Playlist" target="_BLANK">YCP.JS v04</a></h1>
 		<p><b>NEW:</b> Multi channel playlist</p>
-		<pre>&lt;!-- Selector by Id --&gt;
-&lt;div id="unix" data-ycp="bachorsan"&gt;&lt;/div&gt;
+		<pre>&lt;!-- CSS --&gt;
+&lt;link type="text/css" rel="stylesheet" href="css/ycp.css" /&gt;
 
+&lt;!-- HTML --&gt;
+&lt;!-- Selector by Id --&gt;
+&lt;div id="unix" data-ycp="UCoiS7s7HrE7bHNuzERi-FCQ"&gt;&lt;/div&gt; &lt;!-- By ChannelId --&gt;
 &lt;!-- Selector by ClassName --&gt;
-&lt;div class="demo" data-ycp="UCpSPS5yLCxYRuZSrCx-eBjA"&gt;&lt;/div&gt; &lt;!-- By ChannelId --&gt;
+&lt;div class="demo" data-ycp="PLCZlgfAG0GXAiH1acKFPx8EtpJAq44gjP"&gt;&lt;/div&gt; &lt;!-- By PlayListId --&gt;
 &lt;div class="demo" data-ycp="vevouk"&gt;&lt;/div&gt; &lt;!-- By UserName --&gt;
 
-&lt;script&gt;        
-    $(function() {
-	
-        $("#unix").ycp(
-            playlist = 6, // number of videos playlist count
-            autoplay = true, // true or false
-            apikey = 'AIzaSyCj2xxxxxxxxxxxx' // your google api key
-        );
-		
-        $(".demo").ycp(
-            playlist = 10, // number of videos playlist count
-            autoplay = false, // true or false
-            apikey = 'AIzaSyCj2xxxxxxxxxxxx' // your google api key
-        );
-		
-    });
+&lt;!-- jQuery --&gt;
+&lt;script src="//code.jquery.com/jquery-2.1.1.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/ycp.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$(function() {
+        
+    $("#unix").ycp(
+        playlist = 6, // number of videos playlist count
+        autoplay = true, // true or false
+        related = true, // true or false
+        apikey = 'AIzaSyCj2GrDSBy6ISeGg3aWUM4mn3izlA1wgt0' // your google api key
+    );
+            
+    $(".demo").ycp(
+        playlist = 10, // number of videos playlist count
+        autoplay = false, // true or false
+        related = false, // true or false
+        apikey = 'AIzaSyCj2GrDSBy6ISeGg3aWUM4mn3izlA1wgt0' // your google api key
+    );
+            
+});
 &lt;/script&gt;</pre>
 
 		<!-- Selector by Id -->
 		<h1 align="center">Bachors</h1>	
-		<div id="unix" data-ycp="bachorsan"></div>
+		<div id="unix" data-ycp="UCoiS7s7HrE7bHNuzERi-FCQ"></div> <!-- By ChannelId -->
 
 		<!-- Selector by ClassName -->
 		<h1 align="center">Sekolah Koding</h1>	
-		<div class="demo" data-ycp="UCpSPS5yLCxYRuZSrCx-eBjA"></div> <!-- By ChannelId -->
+		<div class="demo" data-ycp="PLCZlgfAG0GXAiH1acKFPx8EtpJAq44gjP"></div> <!-- By PlayListId -->
 		<h1 align="center">Vevo Uk</h1>	
 		<div class="demo" data-ycp="vevouk"></div> <!-- By UserName -->
 
@@ -88,13 +96,15 @@
 		
 			$("#unix").ycp(
 				playlist = 6, // number of videos playlist count
-				autoplay = true, //true or false
+				autoplay = true, // true or false
+				related = true, // true or false
 				apikey = 'AIzaSyCj2xxxxxxxxxxxx' // your google api key
 			);
 			
 			$(".demo").ycp(
 				playlist = 10, // number of videos playlist count
-				autoplay = false, //true or false
+				autoplay = false, // true or false
+				related = false, // true or false
 				apikey = 'AIzaSyCj2xxxxxxxxxxxx' // your google api key
 			);
 			
