@@ -18,31 +18,33 @@ https://developers.google.com/youtube/v3/getting-started</p><br>
 &lt;link type="text/css" rel="stylesheet" href="css/ycp.css" /&gt;
 
 &lt;!-- HTML --&gt;
-&lt;div id="unix" data-ycp="bachorsan"&gt;&lt;/div&gt;
-&lt;div class="demo" data-ycp="UCpSPS5yLCxYRuZSrCx-eBjA"&gt;&lt;/div&gt; &lt;!-- By ChannelId --&gt;
+&lt;!-- Selector by Id --&gt;
+&lt;div id="unix" data-ycp="UCoiS7s7HrE7bHNuzERi-FCQ"&gt;&lt;/div&gt; &lt;!-- By ChannelId --&gt;
+&lt;!-- Selector by ClassName --&gt;
+&lt;div class="demo" data-ycp="PLCZlgfAG0GXAiH1acKFPx8EtpJAq44gjP"&gt;&lt;/div&gt; &lt;!-- By PlayListId --&gt;
 &lt;div class="demo" data-ycp="vevouk"&gt;&lt;/div&gt; &lt;!-- By UserName --&gt;
 
 &lt;!-- jQuery --&gt;
 &lt;script src="//code.jquery.com/jquery-2.1.1.min.js"&gt;&lt;/script&gt;
 &lt;script src="js/ycp.js"&gt;&lt;/script&gt;
-&lt;script&gt;              
-    $(function() {
-    
-        // Selector by Id
-        $("#unix").ycp(
-            playlist = 6, // number of videos playlist count
-            autoplay = true, // true or false
-            apikey = 'AIzaSyCj2xxxxxxxxxxxx' // your google api key
-        );
+&lt;script&gt;
+$(function() {
         
-        // Selector by ClassName
-        $(".demo").ycp(
-            playlist = 10, // number of videos playlist count
-            autoplay = false, // true or false
-            apikey = 'AIzaSyCj2xxxxxxxxxxxx' // your google api key
-        );
-        
-    });
+    $("#unix").ycp(
+        playlist = 6, // number of videos playlist count
+        autoplay = true, // true or false
+        related = true, // true or false
+        apikey = 'AIzaSyCj2GrDSBy6ISeGg3aWUM4mn3izlA1wgt0' // your google api key
+    );
+            
+    $(".demo").ycp(
+        playlist = 10, // number of videos playlist count
+        autoplay = false, // true or false
+        related = false, // true or false
+        apikey = 'AIzaSyCj2GrDSBy6ISeGg3aWUM4mn3izlA1wgt0' // your google api key
+    );
+            
+});
 &lt;/script&gt;</pre>
 </p>
 
