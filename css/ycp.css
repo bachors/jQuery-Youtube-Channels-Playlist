@@ -95,6 +95,12 @@
 	height: 435px;
 }
 
+.ycp div.title {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
 .ycp span.mute, .ycp span.about a {
 	color: #767676;
 	font-size: 0.8em;
