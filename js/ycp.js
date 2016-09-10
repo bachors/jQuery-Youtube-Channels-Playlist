@@ -11,12 +11,13 @@ $.fn.ycp = function(m, n, o) {
         var b = ($(this).attr('id') != null ? '#' + $(this).attr('id') : '.' + $(this).attr('class')),
             channel = $(this).data('ycp'),
             tipe = (channel.substring(0, 2) == 'UC' ? 'id' : 'forUsername'),
+            p = $(this).data('ycp-playlist'),
             html = '<div class="ycp">' + '<div class="unit kenca">' + '<div id="ycp_vid_play' + i + '"></div>' + '</div>' + '<div class = "unit katuhu">' + '<div id="ycp_youtube_channels' + i + '"></div>' + '</div>' + '</div>';
         $(this).html(html);
-        ycp_play(channel, tipe, i, b)
+        ycp_play(channel, tipe, i, b, p)
     });
 
-    function ycp_play(c, d, e, f) {
+    function ycp_play(c, d, e, f, p) {
         $.ajax({
             url: 'https://www.googleapis.com/youtube/v3/channels?part=contentDetails&' + d + '=' + c + '&key=' + o,
             crossDomain: true,
@@ -29,13 +30,13 @@ $.fn.ycp = function(m, n, o) {
             if (n) {
                 autop = 1
             }
-            ycp_list(b, pageToken, chid, autop, e, f)
+            ycp_list(b, pageToken, chid, autop, e, f, p)
         })
     }
 
-    function ycp_list(f, g, h, j, k, l) {
+    function ycp_list(f, g, h, j, k, l, p) {
         $.ajax({
-            url: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=' + m + '&playlistId=' + f + '&key=' + o + '&pageToken=' + g,
+            url: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=' + m + '&playlistId=' + (p ? p : f) + '&key=' + o + '&pageToken=' + g,
             dataType: 'json'
         }).done(function(c) {
             var d = '';

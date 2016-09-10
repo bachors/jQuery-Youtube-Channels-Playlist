@@ -22,26 +22,28 @@ https://developers.google.com/youtube/v3/getting-started</p><br>
 &lt;div class="demo" data-ycp="UCpSPS5yLCxYRuZSrCx-eBjA"&gt;&lt;/div&gt; &lt;!-- By ChannelId --&gt;
 &lt;div class="demo" data-ycp="vevouk"&gt;&lt;/div&gt; &lt;!-- By UserName --&gt;
 
+&lt;div class="demo" data-ycp="deppwaswho" data-ycp-playlist="PLi6LnUBBsf5nE9q6Be8ODN2RGaeySS8sH"&gt;&lt;/div&gt; &lt;!-- By UserName and specific playlist --&gt;
+
 &lt;!-- jQuery --&gt;
 &lt;script src="//code.jquery.com/jquery-2.1.1.min.js"&gt;&lt;/script&gt;
 &lt;script src="js/ycp.js"&gt;&lt;/script&gt;
 &lt;script&gt;              
     $(function() {
-    
+
         // Selector by Id
         $("#unix").ycp(
             playlist = 6, // number of videos playlist count
             autoplay = true, // true or false
             apikey = 'AIzaSyCj2xxxxxxxxxxxx' // your google api key
         );
-        
+
         // Selector by ClassName
         $(".demo").ycp(
             playlist = 10, // number of videos playlist count
             autoplay = false, // true or false
             apikey = 'AIzaSyCj2xxxxxxxxxxxx' // your google api key
         );
-        
+
     });
 &lt;/script&gt;</pre>
 </p>
