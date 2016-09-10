@@ -34,14 +34,14 @@ $(function() {
         playlist = 6, // number of videos playlist count
         autoplay = true, // true or false
         related = true, // true or false
-        apikey = 'AIzaSyCj2GrDSBy6ISeGg3aWUM4mn3izlA1wgt0' // your google api key
+        apikey = 'AIzaSyCj2xxxxxxxxxxxx' // your google api key
     );
             
     $(".demo").ycp(
         playlist = 10, // number of videos playlist count
         autoplay = false, // true or false
         related = false, // true or false
-        apikey = 'AIzaSyCj2GrDSBy6ISeGg3aWUM4mn3izlA1wgt0' // your google api key
+        apikey = 'AIzaSyCj2xxxxxxxxxxxx' // your google api key
     );
             
 });
