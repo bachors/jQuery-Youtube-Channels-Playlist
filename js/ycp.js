@@ -8,9 +8,9 @@
 $.fn.ycp = function(m, n, p, o) {
 
     $(this).each(function(i, a) {
-		var b = ($(this).attr('id') != null ? '#' + $(this).attr('id') : '.' + $(this).attr('class')),
+		var b = ($(this).attr('id') != null && $(this).attr('id') != undefined ? '#' + $(this).attr('id') : '.' + $(this).attr('class')),
 			channel = $(this).data('ycp'),
-			html = '<div class="ycp">' + '<div class="unit kenca">' + '<div id="ycp_vid_play' + i + '"></div>' + '</div>' + '<div class = "unit katuhu">' + '<div id="ycp_youtube_channels' + i + '"></div>' + '</div>' + '</div>';
+			html = '<div class="ycp">' + '<div class="unit kenca">' + '<div class="ycp_vid_play" title="Play video"></div>' + '</div>' + '<div class = "unit katuhu">' + '<div id="ycp_youtube_channels' + i + '"></div>' + '</div>' + '</div>';
 			$(this).html(html);
 		if(channel.substring(0, 2) == 'PL' || channel.substring(0, 2) == 'UU'){
 			var pageToken = '';
@@ -45,15 +45,20 @@ $.fn.ycp = function(m, n, p, o) {
             $.each(c.items, function(i, a) {
                 var b = c.items[i].snippet.resourceId.videoId;
                 ycp_part(b, i, k, l);
-                d += '<div class="play" data-vvv="' + b + '" title="' + c.items[i].snippet.title + '"><div class="thumb"><img src="' + c.items[i].snippet.thumbnails.default.url + '" alt=" "><span class="tm' + i + '"></span></div>';
+                d += '<div class="play" data-vvv="' + b + '" data-img="' + c.items[i].snippet.thumbnails.high.url + '" title="' + c.items[i].snippet.title + '"><div class="thumb"><img src="' + c.items[i].snippet.thumbnails.default.url + '" alt=" "><span class="tm' + i + '"></span></div>';
                 d += '<div class="title">' + c.items[i].snippet.title + '</div><span class="mute by' + i + '"></span><br><span class="mute views' + i + '"></span> <span class="mute">-</span> <span class="mute date' + i + '"></span></div>'
             });
             d += '</div>';
             $(l + ' .ycp div#ycp_youtube_channels' + k).html(d);
-            if (c.prevPageToken == null) {
-                var e = $(l + ' .ycp div#ycp_youtube_channels' + k + ' div.play').attr("data-vvv");
-                $(l + ' .ycp div#ycp_vid_play' + k).html('<iframe src="http://www.youtube.com/embed/' + e + '?rel=' + (p == true ? 1 : 0) + '&amp;autoplay=' + (n == true ? 1 : 0) + '" allowfullscreen="" frameborder="0" class="vid-iframe"></iframe>');
-                $(l + ' .ycp div#ycp_youtube_channels' + k + ' div').removeClass('vid-active');
+            if (c.prevPageToken == null || c.prevPageToken == undefined) {
+                var e = $(l + ' .ycp div#ycp_youtube_channels' + k + ' div.play').attr("data-vvv"),
+					imag = $(l + ' .ycp div#ycp_youtube_channels' + k + ' div.play').attr("data-img");
+				if(n == false){
+					$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<img src=" ' + imag + '">');
+                }else{
+					$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<iframe src="http://www.youtube.com/embed/' + e + '?rel=' + (p == true ? 1 : 0) + '&amp;autoplay=' + (n == true ? 1 : 0) + '" allowfullscreen="" frameborder="0" class="vid-iframe"></iframe>');
+                }
+				$(l + ' .ycp div#ycp_youtube_channels' + k + ' div').removeClass('vid-active');
                 $(l + ' .ycp div#ycp_youtube_channels' + k + ' div.play:eq(0)').addClass('vid-active')
             } else {
                 $(l + ' .ycp div#ycp_youtube_channels' + k + ' span.vid-prev').click(function() {
@@ -69,13 +74,23 @@ $.fn.ycp = function(m, n, p, o) {
             });
             $(l + ' .ycp div#ycp_youtube_channels' + k + ' div.play').each(function() {
                 $(this).click(function() {
-                    var a = $(this).attr("data-vvv");
+                    var a = $(this).attr("data-vvv"),
+						m = $(this).attr("data-img");
                     $(l + ' .ycp div#ycp_youtube_channels' + k + ' div').removeClass('vid-active');
                     $(this).addClass('vid-active');
-                    $(l + ' .ycp div#ycp_vid_play' + k).html('<iframe src="http://www.youtube.com/embed/' + a + '?rel=' + (p == true ? 1 : 0) + '&amp;autoplay=' + (n == true ? 1 : 0) + '" allowfullscreen="" frameborder="0" class="vid-iframe"></iframe>');
-                    return false
+					if(n == false){
+						$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<img src=" ' + m + '">');
+					}else{
+						$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<iframe src="http://www.youtube.com/embed/' + a + '?rel=' + (p == true ? 1 : 0) + '&amp;autoplay=' + (n == true ? 1 : 0) + '" allowfullscreen="" frameborder="0" class="vid-iframe"></iframe>');
+					}
+					return false
                 })
-            })
+            });
+			$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').click(function() {
+                var a = $(l + ' .ycp div#ycp_youtube_channels' + k + ' div.play.vid-active').attr("data-vvv");
+				$(this).html('<iframe src="http://www.youtube.com/embed/' + a + '?rel=' + (p == true ? 1 : 0) + '&amp;autoplay=' + (n == true ? 1 : 0) + '" allowfullscreen="" frameborder="0" class="vid-iframe"></iframe>');
+				return false
+			});
         })
     }
 
