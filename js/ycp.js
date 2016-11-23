@@ -56,7 +56,12 @@ $.fn.ycp = function(m, n, p, o) {
 				if(n == false){
 					$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<img src=" ' + imag + '">');
                 }else{
-					$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<iframe src="http://www.youtube.com/embed/' + e + '?rel=' + (p == true ? 1 : 0) + '&amp;autoplay=' + (n == true ? 1 : 0) + '" allowfullscreen="" frameborder="0" class="vid-iframe"></iframe>');
+					var hu = '<object type="application/x-shockwave-flash" data="//www.youtube.com/v/' + e + '?rel=' + (p == true ? 1 : 0) + '&amp;autoplay=1" class="vid-iframe">'
+							+'	<param name="movie" value="//www.youtube.com/v/' + e + '?rel=' + (p == true ? 1 : 0) + '&amp;autoplay=1" />'
+							+'	<param name="allowFullScreen" value="true" />'
+							+'	<param name="allowscriptaccess" value="always" />'
+							+'</object>';
+					$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html(hu);
                 }
 				$(l + ' .ycp div#ycp_youtube_channels' + k + ' div').removeClass('vid-active');
                 $(l + ' .ycp div#ycp_youtube_channels' + k + ' div.play:eq(0)').addClass('vid-active')
@@ -81,14 +86,24 @@ $.fn.ycp = function(m, n, p, o) {
 					if(n == false){
 						$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<img src=" ' + m + '">');
 					}else{
-						$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<iframe src="http://www.youtube.com/embed/' + a + '?rel=' + (p == true ? 1 : 0) + '&amp;autoplay=' + (n == true ? 1 : 0) + '" allowfullscreen="" frameborder="0" class="vid-iframe"></iframe>');
+						var huy = '<object type="application/x-shockwave-flash" data="//www.youtube.com/v/' + a + '?rel=' + (p == true ? 1 : 0) + '&amp;autoplay=1" class="vid-iframe">'
+								+'	<param name="movie" value="//www.youtube.com/v/' + a + '?rel=' + (p == true ? 1 : 0) + '&amp;autoplay=1" />'
+								+'	<param name="allowFullScreen" value="true" />'
+								+'	<param name="allowscriptaccess" value="always" />'
+								+'</object>';
+						$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html(huy);
 					}
 					return false
                 })
             });
 			$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').click(function() {
                 var a = $(l + ' .ycp div#ycp_youtube_channels' + k + ' div.play.vid-active').attr("data-vvv");
-				$(this).html('<iframe src="http://www.youtube.com/embed/' + a + '?rel=' + (p == true ? 1 : 0) + '&amp;autoplay=' + (n == true ? 1 : 0) + '" allowfullscreen="" frameborder="0" class="vid-iframe"></iframe>');
+				var hux = '<object type="application/x-shockwave-flash" data="//www.youtube.com/v/' + a + '?rel=' + (p == true ? 1 : 0) + '&amp;autoplay=1" class="vid-iframe">'
+						+'	<param name="movie" value="//www.youtube.com/v/' + a + '?rel=' + (p == true ? 1 : 0) + '&amp;autoplay=1" />'
+						+'	<param name="allowFullScreen" value="true" />'
+						+'	<param name="allowscriptaccess" value="always" />'
+						+'</object>';
+				$(this).html(hux);
 				return false
 			});
         })
