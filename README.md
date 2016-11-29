@@ -14,6 +14,14 @@ https://developers.google.com/youtube/v3/getting-started</p><br>
 <p>Register and get your Youtube API key <a href="https://code.google.com/apis/console" target="_blank">here</a></p>
 
 <h1>Usage:</h1>
+
+<p>Required:</p>
+<pre>apikey : 'xxxxxxxxxxxxxxxx'</pre>
+<p>Options:</p>
+<pre>playlist : number of videos playlist count. Default = 10
+autoplay : true. Default = false
+related : true. Default = false</pre>
+
 <pre>&lt;!-- CSS --&gt;
 &lt;link type="text/css" rel="stylesheet" href="css/ycp.css" /&gt;
 
@@ -30,19 +38,16 @@ https://developers.google.com/youtube/v3/getting-started</p><br>
 &lt;script&gt;
 $(function() {
         
-    $("#unix").ycp(
-        playlist = 6, // number of videos playlist count
-        autoplay = true, // true or false
-        related = true, // true or false
-        apikey = 'AIzaSyCj2xxxxxxxxxxxx' // your google api key
-    );
-            
-    $(".demo").ycp(
-        playlist = 10, // number of videos playlist count
-        autoplay = false, // true or false
-        related = false, // true or false
-        apikey = 'AIzaSyCj2xxxxxxxxxxxx' // your google api key
-    );
+   $("#unix").ycp({
+        apikey : 'xxxxxxxxxxxxxxxx',
+        playlist : 6,
+        autoplay : true,
+        related : true
+    });
+			
+    $(".demo").ycp({
+        apikey : 'xxxxxxxxxxxxxxxx'
+    });
             
 });
 &lt;/script&gt;</pre>
