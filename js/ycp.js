@@ -1,11 +1,20 @@
 /******************************************************
-* #### jQuery-Youtube-Channels-Playlist v04 ####
+* #### jQuery-Youtube-Channels-Playlist v05 ####
 * Coded by Ican Bachors 2014.
 * http://ibacor.com/labs/jquery-youtube-channels-playlist/
 * Updates will be posted to this site.
 ******************************************************/
 
-$.fn.ycp = function(m, n, p, o) {
+$.fn.ycp = function(opt) {
+	
+	var defaultopt = {
+        playlist : 10,
+		autoplay : false,
+		related : false
+    };
+	opt.playlist = (opt.playlist == undefined ? defaultopt.playlist : opt.playlist);
+	opt.autoplay = (opt.autoplay == undefined ? defaultopt.autoplay : opt.autoplay);
+	opt.related = (opt.related == undefined ? defaultopt.related : opt.related);
 
     $(this).each(function(i, a) {
 		var b = ($(this).attr('id') != null && $(this).attr('id') != undefined ? '#' + $(this).attr('id') : '.' + $(this).attr('class')),
@@ -23,7 +32,7 @@ $.fn.ycp = function(m, n, p, o) {
 
     function ycp_play(c, d, e, f) {
         $.ajax({
-            url: 'https://www.googleapis.com/youtube/v3/channels?part=contentDetails&' + d + '=' + c + '&key=' + o,
+            url: 'https://www.googleapis.com/youtube/v3/channels?part=contentDetails&' + d + '=' + c + '&key=' + opt.apikey,
             crossDomain: true,
             dataType: 'json'
         }).done(function(a) {
@@ -35,7 +44,7 @@ $.fn.ycp = function(m, n, p, o) {
 
     function ycp_list(f, g, k, l) {
         $.ajax({
-            url: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=' + m + '&playlistId=' + f + '&key=' + o + '&pageToken=' + g,
+            url: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=' + opt.playlist + '&playlistId=' + f + '&key=' + opt.apikey + '&pageToken=' + g,
             dataType: 'json'
         }).done(function(c) {
             var d = '';
@@ -53,11 +62,11 @@ $.fn.ycp = function(m, n, p, o) {
             if (c.prevPageToken == null || c.prevPageToken == undefined) {
                 var e = $(l + ' .ycp div#ycp_youtube_channels' + k + ' div.play').attr("data-vvv"),
 					imag = $(l + ' .ycp div#ycp_youtube_channels' + k + ' div.play').attr("data-img");
-				if(n == false){
+				if(opt.autoplay == false){
 					$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<img src=" ' + imag + '">');
                 }else{
-					var hu = '<object type="application/x-shockwave-flash" data="//www.youtube.com/v/' + e + '?rel=' + (p == true ? 1 : 0) + '&amp;autoplay=1" class="vid-iframe">'
-							+'	<param name="movie" value="//www.youtube.com/v/' + e + '?rel=' + (p == true ? 1 : 0) + '&amp;autoplay=1" />'
+					var hu = '<object type="application/x-shockwave-flash" data="//www.youtube.com/v/' + e + '?rel=' + (opt.related == true ? 1 : 0) + '&amp;autoplay=1" class="vid-iframe">'
+							+'	<param name="movie" value="//www.youtube.com/v/' + e + '?rel=' + (opt.related == true ? 1 : 0) + '&amp;autoplay=1" />'
 							+'	<param name="allowFullScreen" value="true" />'
 							+'	<param name="allowscriptaccess" value="always" />'
 							+'</object>';
@@ -83,11 +92,11 @@ $.fn.ycp = function(m, n, p, o) {
 						m = $(this).attr("data-img");
                     $(l + ' .ycp div#ycp_youtube_channels' + k + ' div').removeClass('vid-active');
                     $(this).addClass('vid-active');
-					if(n == false){
+					if(opt.autoplay == false){
 						$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<img src=" ' + m + '">');
 					}else{
-						var huy = '<object type="application/x-shockwave-flash" data="//www.youtube.com/v/' + a + '?rel=' + (p == true ? 1 : 0) + '&amp;autoplay=1" class="vid-iframe">'
-								+'	<param name="movie" value="//www.youtube.com/v/' + a + '?rel=' + (p == true ? 1 : 0) + '&amp;autoplay=1" />'
+						var huy = '<object type="application/x-shockwave-flash" data="//www.youtube.com/v/' + a + '?rel=' + (opt.related == true ? 1 : 0) + '&amp;autoplay=1" class="vid-iframe">'
+								+'	<param name="movie" value="//www.youtube.com/v/' + a + '?rel=' + (opt.related == true ? 1 : 0) + '&amp;autoplay=1" />'
 								+'	<param name="allowFullScreen" value="true" />'
 								+'	<param name="allowscriptaccess" value="always" />'
 								+'</object>';
@@ -98,8 +107,8 @@ $.fn.ycp = function(m, n, p, o) {
             });
 			$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').click(function() {
                 var a = $(l + ' .ycp div#ycp_youtube_channels' + k + ' div.play.vid-active').attr("data-vvv");
-				var hux = '<object type="application/x-shockwave-flash" data="//www.youtube.com/v/' + a + '?rel=' + (p == true ? 1 : 0) + '&amp;autoplay=1" class="vid-iframe">'
-						+'	<param name="movie" value="//www.youtube.com/v/' + a + '?rel=' + (p == true ? 1 : 0) + '&amp;autoplay=1" />'
+				var hux = '<object type="application/x-shockwave-flash" data="//www.youtube.com/v/' + a + '?rel=' + (opt.related == true ? 1 : 0) + '&amp;autoplay=1" class="vid-iframe">'
+						+'	<param name="movie" value="//www.youtube.com/v/' + a + '?rel=' + (opt.related == true ? 1 : 0) + '&amp;autoplay=1" />'
 						+'	<param name="allowFullScreen" value="true" />'
 						+'	<param name="allowscriptaccess" value="always" />'
 						+'</object>';
@@ -111,7 +120,7 @@ $.fn.ycp = function(m, n, p, o) {
 
     function ycp_part(c, i, d, e) {
         $.ajax({
-            url: 'https://www.googleapis.com/youtube/v3/videos?id=' + c + '&key=' + o + '&part=contentDetails,snippet,statistics',
+            url: 'https://www.googleapis.com/youtube/v3/videos?id=' + c + '&key=' + opt.apikey + '&part=contentDetails,snippet,statistics',
             dataType: 'json'
         }).done(function(a) {
             var b = a.items[0].contentDetails.duration,
