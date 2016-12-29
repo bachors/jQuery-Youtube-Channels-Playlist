@@ -65,7 +65,7 @@ $.fn.ycp = function(opt) {
 				if(opt.autoplay == false){
 					$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<img src=" ' + imag + '">');
                 }else{
-					$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<iframe src="http://www.youtube.com/embed/' + e + '?rel=' + (opt.related == true ? 1 : 0) + '&amp;autoplay=1" allowfullscreen="" frameborder="0" class="vid-iframe"></iframe>');
+					$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<iframe src="//www.youtube.com/embed/' + e + '?rel=' + (opt.related == true ? 1 : 0) + '&amp;autoplay=1" allowfullscreen="" frameborder="0" class="vid-iframe"></iframe>');
                 }
 				$(l + ' .ycp div#ycp_youtube_channels' + k + ' div').removeClass('vid-active');
                 $(l + ' .ycp div#ycp_youtube_channels' + k + ' div.play:eq(0)').addClass('vid-active')
@@ -90,14 +90,14 @@ $.fn.ycp = function(opt) {
 					if(opt.autoplay == false){
 						$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<img src=" ' + m + '">');
 					}else{
-						$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<iframe src="http://www.youtube.com/embed/' + a + '?rel=' + (opt.related == true ? 1 : 0) + '&amp;autoplay=1" allowfullscreen="" frameborder="0" class="vid-iframe"></iframe>');
+						$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').html('<iframe src="//www.youtube.com/embed/' + a + '?rel=' + (opt.related == true ? 1 : 0) + '&amp;autoplay=1" allowfullscreen="" frameborder="0" class="vid-iframe"></iframe>');
 					}
 					return false
                 })
             });
 			$(l + ' .ycp div.ycp_vid_play:eq(' + k + ')').click(function() {
                 var a = $(l + ' .ycp div#ycp_youtube_channels' + k + ' div.play.vid-active').attr("data-vvv");
-				$(this).html('<iframe src="http://www.youtube.com/embed/' + a + '?rel=' + (opt.related == true ? 1 : 0) + '&amp;autoplay=1" allowfullscreen="" frameborder="0" class="vid-iframe"></iframe>');
+				$(this).html('<iframe src="//www.youtube.com/embed/' + a + '?rel=' + (opt.related == true ? 1 : 0) + '&amp;autoplay=1" allowfullscreen="" frameborder="0" class="vid-iframe"></iframe>');
 				return false
 			});
         })
