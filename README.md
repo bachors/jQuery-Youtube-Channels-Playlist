@@ -12,9 +12,12 @@ https://developers.google.com/youtube/v3/getting-started</p><br>
 - multi channel playlist.</p>
 
 <p>Register and get your Youtube API key <a href="https://code.google.com/apis/console" target="_blank">here</a></p>
-
-<h1>Usage:</h1>
-
+<h3>HTML:</h3>
+<p>Required:</p>
+<pre>data-ycp_ycp_channel = 'vevouk'</pre>
+<p>Options:</p>
+<pre>data-ycp_title = 'Title your playlist'</pre>
+<h3>Javascript:</h3>
 <p>Required:</p>
 <pre>apikey : 'xxxxxxxxxxxxxxxx'</pre>
 <p>Options:</p>
@@ -25,12 +28,12 @@ related : true. Default = false</pre>
 <pre>&lt;!-- CSS --&gt;
 &lt;link type="text/css" rel="stylesheet" href="css/ycp.css" /&gt;
 
-&lt;!-- HTML --&gt;
 &lt;!-- Selector by Id --&gt;
-&lt;div id="unix" data-ycp="UCoiS7s7HrE7bHNuzERi-FCQ"&gt;&lt;/div&gt; &lt;!-- By ChannelId --&gt;
+&lt;div id="unix" data-ycp_title="#Demo - iBacor.com" data-ycp_channel="UCoiS7s7HrE7bHNuzERi-FCQ"&gt;&lt;/div&gt; &lt;!-- By ChannelId --&gt;
+
 &lt;!-- Selector by ClassName --&gt;
-&lt;div class="demo" data-ycp="PLCZlgfAG0GXAiH1acKFPx8EtpJAq44gjP"&gt;&lt;/div&gt; &lt;!-- By PlayListId --&gt;
-&lt;div class="demo" data-ycp="vevouk"&gt;&lt;/div&gt; &lt;!-- By UserName --&gt;
+&lt;div class="demo" data-ycp_title="#Javascript - Sekolah Koding" data-ycp_channel="PLCZlgfAG0GXAiH1acKFPx8EtpJAq44gjP"&gt;&lt;/div&gt; &lt;!-- By PlayListId --&gt;
+&lt;div class="demo" data-ycp_title="#News - Vevo Uk" data-ycp_channel="vevouk"&gt;&lt;/div&gt; &lt;!-- By UserName --&gt;
 
 &lt;!-- jQuery --&gt;
 &lt;script src="//code.jquery.com/jquery-2.1.1.min.js"&gt;&lt;/script&gt;
@@ -38,13 +41,13 @@ related : true. Default = false</pre>
 &lt;script&gt;
 $(function() {
         
-   $("#unix").ycp({
+    $("#unix").ycp({
         apikey : 'xxxxxxxxxxxxxxxx',
         playlist : 6,
         autoplay : true,
         related : true
     });
-			
+            
     $(".demo").ycp({
         apikey : 'xxxxxxxxxxxxxxxx'
     });
