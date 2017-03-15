@@ -1,5 +1,5 @@
 /******************************************************
-* #### jQuery-Youtube-Channels-Playlist v04 ####
+* #### jQuery-Youtube-Channels-Playlist v06 ####
 * Coded by Ican Bachors 2014.
 * http://ibacor.com/labs/jquery-youtube-channels-playlist/
 * Updates will be posted to this site.
@@ -23,7 +23,7 @@
 
 .ycp span.about {
 	float: right;
-	background: #111111;
+	background: #111;
 	padding: 2px;
 	border-radius: 50%;
 	width: 20px;
@@ -49,11 +49,29 @@
 
 .ycp .kenca {
 	width: 65%;
+	height: 528px
 }
 
-.ycp .kenca img {
+.ycp .kenca .ycp_vid_play {
 	width: 100%;
 	height: 100%;
+	cursor: pointer;	
+	background: rgba(17,17,17,0.7);
+}
+
+.ycp .kenca .ycp_vid_play a {
+	color: #fff
+}
+
+.ycp .kenca .ycp_vid_play a::before {
+	color: rgba(230,35,29,0.8);
+	content: "\25B6";
+	z-index: 100;
+    font-size: 50px;
+    position: relative;
+    left: 20px;
+    top: 10px;
+	margin-right: 25px
 }
 
 .ycp .thumb {
@@ -61,16 +79,16 @@
 	margin-right: 10px;
 	position: relative;
 	height: 61px;
-	background: #4a4a4a;
+	background: #1a1a1a;
 }
 
 .ycp .thumb span {
 	position: absolute;
-	right: 0px;
+	right: 2px;
 	bottom: 0px;
 	padding: 2px;
 	background: #000;
-	color: #cacaca;
+	color: silver;
 	font-size: 0.8em;
 }
 
@@ -83,21 +101,28 @@
 }
 
 .ycp .vid-top {
-	color: #fff;
-	background: #1a1a1a;
-	border-bottom: 1px solid #111;
-	padding: 20px;
+	color: #767676;
+	background: #222;
+	padding: 15px 10px;
 	display: block;
 	overflow: hidden;
 	*overflow: visible;
+	height: 48px
+}
+
+.ycp .vid-top div.title {
+	color: #fff;
+	border-bottom: 1px solid #111;
+	padding-bottom: 5px;
+	margin-bottom: 5px
 }
 
 .ycp .vid-bottom {
-	color: #cacaca;
-	background: #222;
+	color: #ddd;
+	background: #111;
 	display: block;
 	overflow-y: scroll;
-	height: 435px;
+	height: 450px;
 }
 
 .ycp div.title {
@@ -106,7 +131,8 @@
 	text-overflow: ellipsis;
 }
 
-.ycp span.mute, .ycp span.about a {
+.ycp span.mute,
+.ycp span.about a {
 	color: #767676;
 	font-size: 0.8em;
 }
@@ -114,23 +140,27 @@
 .ycp .thumb img {
 	width: 80px;
 	height: 100%;
+	border: 2px solid #000
 }
 
-.ycp .play:hover {
-	background: #4a4a4a;
-}
-
+.ycp .play:hover,
 .ycp .vid-active {
-	background: #3a3a3a;
+	background: #000;
 }
 
-.ycp .vid-prev, .ycp .vid-next, .ycp .play {
+.ycp .vid-active .thumb img {
+	border: 2px solid #e6231d
+}
+
+.ycp .vid-prev, 
+.ycp .vid-next, 
+.ycp .play {
 	cursor: pointer;
 }
 
 .ycp .vid-iframe {
 	width: 100%;
-	height: 500px;
+	height: 100%;
 	border: 0;
 }
 
@@ -141,13 +171,10 @@
 
 	.ycp .kenca {
 		width: 100%;
-	}
-
-	.ycp .vid-iframe {
 		height: 350px;
 	}
 
 	.ycp .vid-bottom {
-		height: 285px;
+		height: 300px;
 	};
 }
