@@ -55,5 +55,3 @@ $(function() {
 });
 &lt;/script&gt;</pre>
 </p>
-
-<h3><a href="http://ibacor.com/demo/jquery-youtube-channels-playlist/">DEMO</a></h3>
