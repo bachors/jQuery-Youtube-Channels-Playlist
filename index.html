@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+		
+		<title>jQuery Youtube Channels Playlist - Bachors.com</title>
+
+		<!-- Custom style  Youtube Channels Playlist -->
+		<link type="text/css" rel="stylesheet" href="css/ycp.css" />
+		
+		<style>
+		body {
+			color: #fff; 
+			background: #FF3B68;
+			background: -moz-linear-gradient(122deg, #FF3B68 30%, #A41CFF 81%);
+			background: -webkit-linear-gradient(122deg, #FF3B68 30%, #A41CFF 81%);
+			background: -o-linear-gradient(122deg, #FF3B68 30%, #A41CFF 81%);
+			background: -ms-linear-gradient(122deg, #FF3B68 30%, #A41CFF 81%);
+			background: linear-gradient(122deg, #FF3B68 30%, #A41CFF 81%);
+			margin: 20px 10% 20px 10%;
+			font-family: "Roboto", "Helvetica", "Arial", sans-serif
+		}
+		
+		a {
+			color: #333
+		}
+		
+		pre {
+			padding: 10px;
+			border-radius: 4px;
+			border: 0px;
+			background: #111;
+			overflow: auto
+		}
+		
+		pre.prettyprint.prettyprinted {
+			background: #111
+		}
+		
+		input[type='text'] {
+			padding: 10px;
+			border: 0px;
+			width: 300px;
+			margin: 5px
+		}
+		
+		input[type='submit'] {
+			width: 50px;
+			padding: 10px;
+			border: 0px;
+			background: #222;
+			color: #fff;
+			cursor: pointer;
+			margin: 5px
+		}
+
+		@media screen and (max-width:1280px){			
+			body {
+				margin: 20px 5% 10% 5%
+			}
+		}
+
+		@media screen and (max-width:967px){			
+			body {
+				margin: 20px 0px 20px 0px
+			}
+		}
+		</style>
+		<script src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+
+	</head>
+	<body>	
+		
+		<h1 align="center">Demo <a href="https://github.com/bachors/jQuery-Youtube-Channels-Playlist" target="_BLANK">YCP.JS</a></h1>
+		
+		<p align="center">
+			<input id="tit" type="text" placeholder="Title">
+			<input id="ch" type="text" placeholder="ChannelId or UserName or PlayListId">
+			<input id="go" type="submit" value="Go">
+		</p>
+		
+		<br>
+		<!-- Selector by Id -->
+		<div id="unix" data-ycp_title="#Demo - Bachors.com" data-ycp_channel="UCoiS7s7HrE7bHNuzERi-FCQ"></div> <!-- By ChannelId -->
+		<br><br>
+		
+		<!-- Selector by ClassName -->
+		<div class="demo" data-ycp_title="#Javascript - Sekolah Koding" data-ycp_channel="PLCZlgfAG0GXAiH1acKFPx8EtpJAq44gjP"></div> <!-- By PlayListId -->
+		<br><br>
+		<div class="demo" data-ycp_title="#News - Vevo Uk" data-ycp_channel="vevouk"></div> <!-- By UserName -->
+		
+		<h1 align="center">Usage</h1>
+		<pre class="prettyprint">&lt;!-- CSS --&gt;
+&lt;link type="text/css" rel="stylesheet" href="css/ycp.css" /&gt;
+
+&lt;!-- Selector by Id --&gt;
+&lt;div id="unix" data-ycp_title="#Demo - Bachors.com" data-ycp_channel="UCoiS7s7HrE7bHNuzERi-FCQ"&gt;&lt;/div&gt; &lt;!-- By ChannelId --&gt;
+
+&lt;!-- Selector by ClassName --&gt;
+&lt;div class="demo" data-ycp_title="#Javascript - Sekolah Koding" data-ycp_channel="PLCZlgfAG0GXAiH1acKFPx8EtpJAq44gjP"&gt;&lt;/div&gt; &lt;!-- By PlayListId --&gt;
+&lt;div class="demo" data-ycp_title="#News - Vevo Uk" data-ycp_channel="vevouk"&gt;&lt;/div&gt; &lt;!-- By UserName --&gt;
+
+&lt;!-- jQuery --&gt;
+&lt;script src="//code.jquery.com/jquery-2.1.1.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/ycp.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$(function() {
+        
+    $("#unix").ycp({
+        apikey : 'xxxxxxxxxxxxxxxx',
+        playlist : 7,
+        autoplay : true,
+        related : true
+    });
+			
+    $(".demo").ycp({
+        apikey : 'xxxxxxxxxxxxxxxx'
+    });
+            
+});
+&lt;/script&gt;</pre>
+
+		<!-- include jQuery -->
+		<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+
+		<!-- jQuery Youtube Channels Playlist -->
+		<script src="js/ycp.min.js"></script>
+
+		<!-- Setting Example -->
+		<script>		
+		$(function() {
+		
+			$("#unix").ycp({
+				apikey : 'AIzaSyCj2GrDSBy6ISeGg3aWUM4mn3izlA1wgt0',
+				playlist : 7,
+				autoplay : true,
+				related : true
+			});
+			
+			$(".demo").ycp({
+				apikey : 'AIzaSyCj2GrDSBy6ISeGg3aWUM4mn3izlA1wgt0'
+			});
+		
+			$("#go").click(function(){
+				if($("#tit").val() != '' && $("#ch").val() != ''){
+					$("#unix").data('ycp_title', $("#tit").val());
+					$("#unix").data('ycp_channel', $("#ch").val());
+					$("#unix").ycp({
+						apikey : 'AIzaSyCj2GrDSBy6ISeGg3aWUM4mn3izlA1wgt0',
+						playlist : 10,
+						autoplay : true,
+						related : true
+					});
+				}else{
+					alert('Not empty!');
+				}
+				return false;
+			});
+			
+		});
+		</script>
+
+	</body>
+</html>

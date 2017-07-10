@@ -1,0 +1,12 @@
+{
+  "name": "jQuery-Youtube-Channels-Playlist",
+  "main": "js/ycp.js",
+  "homepage": "https://github.com/bachors/jQuery-Youtube-Channels-Playlist",
+  "description": "jQuery plugin youtube playlist.",
+  "keywords": [
+    "youtube",
+    "videos",
+    "gallery"
+  ],
+  "license": "MIT"
+}
