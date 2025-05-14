@@ -131,16 +131,18 @@ $(function() {
 		<!-- Setting Example -->
 		<script>		
 		$(function() {
+
+			const apikey = "AIzaSyA0XdFjyX0c5pTAxNCIEPSnuGQ-cL2PLE0";
 		
 			$("#unix").ycp({
-				apikey : 'AIzaSyCj2GrDSBy6ISeGg3aWUM4mn3izlA1wgt0',
+				apikey : apikey,
 				playlist : 7,
 				autoplay : true,
 				related : true
 			});
 			
 			$(".demo").ycp({
-				apikey : 'AIzaSyCj2GrDSBy6ISeGg3aWUM4mn3izlA1wgt0'
+				apikey : apikey
 			});
 		
 			$("#go").click(function(){
@@ -148,7 +150,7 @@ $(function() {
 					$("#unix").data('ycp_title', $("#tit").val());
 					$("#unix").data('ycp_channel', $("#ch").val());
 					$("#unix").ycp({
-						apikey : 'AIzaSyCj2GrDSBy6ISeGg3aWUM4mn3izlA1wgt0',
+						apikey : apikey,
 						playlist : 10,
 						autoplay : true,
 						related : true
